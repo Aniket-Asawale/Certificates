@@ -1632,10 +1632,11 @@
         }
 
         shareResumeBtn.addEventListener('click', async () => {
+            const resumeUrl = 'https://aniket-asawale.github.io/Certificates/aniket-asawale-resume.pdf';
             const shareData = {
                 title: 'Aniket Asawale — Resume',
                 text: 'Check out my resume and professional certificates portfolio.',
-                url: window.location.href
+                url: resumeUrl
             };
 
             if (navigator.share && navigator.canShare && navigator.canShare(shareData)) {
@@ -1648,8 +1649,8 @@
                 }
             } else {
                 try {
-                    await navigator.clipboard.writeText(window.location.href);
-                    showToast('Link copied to clipboard!');
+                    await navigator.clipboard.writeText(resumeUrl);
+                    showToast('Resume link copied to clipboard!');
                 } catch (err) {
                     showToast('Unable to copy link. Please copy the URL from your browser.');
                 }
