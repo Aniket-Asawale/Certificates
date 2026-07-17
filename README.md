@@ -24,3 +24,10 @@ A professional, self-hosted simple portfolio showcasing verified certifications 
 
 - **GitHub:** [Aniket-Asawale](https://github.com/Aniket-Asawale)
 - **LinkedIn:** [aniket-asawale](https://www.linkedin.com/in/aniket-asawale/)
+
+## 📄 Public Resume Share
+
+- **Portfolio page:** [https://aniket-asawale.github.io/Certificates/](https://aniket-asawale.github.io/Certificates/)
+- **Direct resume PDF:** [https://aniket-asawale.github.io/Certificates/aniket-asawale-resume.pdf](https://aniket-asawale.github.io/Certificates/Certificates/aniket-asawale-resume.pdf)
+
+

@@ -529,6 +529,54 @@
             border-color: var(--border-medium);
         }
 
+        .btn-share {
+            background: rgba(34, 197, 94, 0.12);
+            color: #4ade80;
+            border: 1px solid rgba(34, 197, 94, 0.2);
+        }
+
+        .btn-share:hover {
+            background: rgba(34, 197, 94, 0.2);
+            color: #86efac;
+            border-color: rgba(34, 197, 94, 0.35);
+        }
+
+        /* ═══════════════════════════════════════════════════
+           TOAST NOTIFICATION
+           ═══════════════════════════════════════════════════ */
+        .toast {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%) translateY(20px);
+            background: var(--bg-card);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--border-medium);
+            color: var(--text-primary);
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius-pill);
+            font-size: 0.85rem;
+            font-weight: 500;
+            z-index: 3000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s var(--ease-out-expo);
+            box-shadow: var(--shadow-card);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .toast.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        .toast i {
+            color: #4ade80;
+        }
+
         /* ═══════════════════════════════════════════════════
            RESUME & COLLECTIONS SECTION
            ═══════════════════════════════════════════════════ */
@@ -1040,12 +1088,15 @@
                     <h3>Resume</h3>
                     <p>Download my full resume with project details, education, experience, and all certifications listed above.</p>
                     <div class="extra-actions">
-                        <button class="btn btn-view" onclick="openPreview('Certificates/aniket-asawale-resume.pdf', 'Aniket Asawale — Resume')" aria-label="View resume">
+                        <button class="btn btn-view" onclick="openPreview('aniket-asawale-resume.pdf', 'Aniket Asawale — Resume')" aria-label="View resume">
                             <i class="far fa-eye"></i> View
                         </button>
-                        <a href="Certificates/aniket-asawale-resume.pdf" class="btn btn-download" download aria-label="Download resume">
+                        <a href="aniket-asawale-resume.pdf" class="btn btn-download" download aria-label="Download resume">
                             <i class="fas fa-download"></i> Download PDF
                         </a>
+                        <button class="btn btn-share" id="shareResumeBtn" aria-label="Share resume">
+                            <i class="fas fa-share-nodes"></i> Share
+                        </button>
                     </div>
                 </div>
             </div>
@@ -1454,6 +1505,12 @@
         <i class="fas fa-chevron-up"></i>
     </button>
 
+    <!-- ═══════════════ TOAST NOTIFICATION ═══════════════ -->
+    <div class="toast" id="toast">
+        <i class="fas fa-check-circle"></i>
+        <span id="toastMessage">Link copied to clipboard!</span>
+    </div>
+
     <!-- ═══════════════ JAVASCRIPT ═══════════════ -->
     <script>
         // ── PDF Preview Modal ──
@@ -1558,6 +1615,46 @@
         }, { threshold: 0.2, rootMargin: `-${parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-height'))}px 0px -60% 0px` });
 
         sections.forEach(s => sectionObserver.observe(s));
+
+        // ── Share Resume Button ──
+        const shareResumeBtn = document.getElementById('shareResumeBtn');
+        const toast = document.getElementById('toast');
+        const toastMessage = document.getElementById('toastMessage');
+        let toastTimeout;
+
+        function showToast(message) {
+            toastMessage.textContent = message;
+            toast.classList.add('show');
+            clearTimeout(toastTimeout);
+            toastTimeout = setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
+        }
+
+        shareResumeBtn.addEventListener('click', async () => {
+            const shareData = {
+                title: 'Aniket Asawale — Resume',
+                text: 'Check out my resume and professional certificates portfolio.',
+                url: window.location.href
+            };
+
+            if (navigator.share && navigator.canShare && navigator.canShare(shareData)) {
+                try {
+                    await navigator.share(shareData);
+                } catch (err) {
+                    if (err.name !== 'AbortError') {
+                        console.error('Share failed:', err);
+                    }
+                }
+            } else {
+                try {
+                    await navigator.clipboard.writeText(window.location.href);
+                    showToast('Link copied to clipboard!');
+                } catch (err) {
+                    showToast('Unable to copy link. Please copy the URL from your browser.');
+                }
+            }
+        });
     </script>
 </body>
 </html>
