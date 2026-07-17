@@ -1,0 +1,1563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aniket Asawale — Professional Certificates & Credentials Portfolio. Cloud Computing, Security, Programming certifications from AWS, Cisco, Oracle, Google, and more.">
+    <meta name="author" content="Aniket Asawale">
+    <meta name="keywords" content="Aniket Asawale, certificates, AWS, Cisco, Oracle, Google, Palo Alto, Juniper, Fortinet, cloud computing, cybersecurity, programming">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Certificates & Credentials | Aniket Asawale">
+    <meta property="og:description" content="Professional certifications in Cloud, Security, and Development from AWS, Cisco, Oracle, Google, and more.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aniket-asawale.github.io/Certificates/">
+    <title>Certificates & Credentials | Aniket Asawale</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* ═══════════════════════════════════════════════════
+           DESIGN SYSTEM — Tokens & Variables
+           ═══════════════════════════════════════════════════ */
+        :root {
+            /* Base palette */
+            --bg-deep: #06080f;
+            --bg-primary: #0a0f1c;
+            --bg-secondary: #111827;
+            --bg-card: rgba(17, 24, 39, 0.65);
+            --bg-card-hover: rgba(30, 41, 59, 0.7);
+            --bg-glass: rgba(255, 255, 255, 0.04);
+            --bg-glass-hover: rgba(255, 255, 255, 0.08);
+
+            /* Text */
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --text-accent: #e2e8f0;
+
+            /* Accent colors */
+            --accent-primary: #6366f1;
+            --accent-primary-glow: rgba(99, 102, 241, 0.25);
+            --accent-amber: #f59e0b;
+            --accent-amber-glow: rgba(245, 158, 11, 0.2);
+
+            /* Category accents */
+            --cloud-color: #f97316;
+            --cloud-glow: rgba(249, 115, 22, 0.15);
+            --security-color: #ef4444;
+            --security-glow: rgba(239, 68, 68, 0.15);
+            --programming-color: #06b6d4;
+            --programming-glow: rgba(6, 182, 212, 0.15);
+            --professional-color: #a78bfa;
+            --professional-glow: rgba(167, 139, 250, 0.15);
+
+            /* Borders */
+            --border-subtle: rgba(255, 255, 255, 0.06);
+            --border-medium: rgba(255, 255, 255, 0.1);
+
+            /* Shadows */
+            --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.3);
+            --shadow-card-hover: 0 12px 40px rgba(0, 0, 0, 0.5);
+            --shadow-glow: 0 0 60px var(--accent-primary-glow);
+
+            /* Spacing */
+            --section-gap: 4rem;
+            --card-gap: 1.5rem;
+            --container-max: 1200px;
+            --nav-height: 64px;
+
+            /* Transitions */
+            --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+            --transition-fast: 0.2s var(--ease-out-expo);
+            --transition-medium: 0.4s var(--ease-out-expo);
+            --transition-slow: 0.6s var(--ease-out-expo);
+
+            /* Border radius */
+            --radius-sm: 6px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --radius-xl: 20px;
+            --radius-pill: 100px;
+        }
+
+        /* ═══════════════════════════════════════════════════
+           RESET & BASE
+           ═══════════════════════════════════════════════════ */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: calc(var(--nav-height) + 2rem);
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-deep);
+            color: var(--text-primary);
+            min-height: 100vh;
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Animated background mesh */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            z-index: -2;
+            background:
+                radial-gradient(ellipse 80% 50% at 20% 40%, rgba(99, 102, 241, 0.08) 0%, transparent 60%),
+                radial-gradient(ellipse 60% 60% at 80% 20%, rgba(249, 115, 22, 0.05) 0%, transparent 50%),
+                radial-gradient(ellipse 50% 80% at 50% 90%, rgba(167, 139, 250, 0.06) 0%, transparent 50%);
+            animation: meshShift 20s ease-in-out infinite alternate;
+        }
+
+        @keyframes meshShift {
+            0%   { opacity: 1; }
+            50%  { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+
+        /* Grain texture overlay */
+        body::after {
+            content: '';
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            opacity: 0.025;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+            pointer-events: none;
+        }
+
+        /* ═══════════════════════════════════════════════════
+           CONTAINER
+           ═══════════════════════════════════════════════════ */
+        .container {
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* ═══════════════════════════════════════════════════
+           NAVIGATION
+           ═══════════════════════════════════════════════════ */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: var(--nav-height);
+            z-index: 1000;
+            background: rgba(6, 8, 15, 0.8);
+            backdrop-filter: blur(20px) saturate(1.5);
+            -webkit-backdrop-filter: blur(20px) saturate(1.5);
+            border-bottom: 1px solid var(--border-subtle);
+            transition: background var(--transition-fast), box-shadow var(--transition-fast);
+        }
+
+        .nav.scrolled {
+            background: rgba(6, 8, 15, 0.95);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-inner {
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--text-primary);
+            text-decoration: none;
+            letter-spacing: -0.01em;
+        }
+
+        .nav-brand i {
+            color: var(--accent-primary);
+            font-size: 1.1rem;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            display: block;
+            padding: 0.5rem 0.85rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            border-radius: var(--radius-sm);
+            transition: color var(--transition-fast), background var(--transition-fast);
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--text-primary);
+            background: var(--bg-glass-hover);
+        }
+
+        .nav-contact {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .nav-contact a {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            transition: color var(--transition-fast), transform var(--transition-fast);
+        }
+
+        .nav-contact a:hover {
+            color: var(--text-primary);
+            transform: translateY(-1px);
+        }
+
+        /* Mobile menu toggle */
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            font-size: 1.3rem;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        /* ═══════════════════════════════════════════════════
+           HERO SECTION
+           ═══════════════════════════════════════════════════ */
+        /* ═══════════════════════════════════════════════════
+           PAGE HEADER
+           ═══════════════════════════════════════════════════ */
+        .page-header {
+            padding: calc(var(--nav-height) + 2.5rem) 0 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .page-header h1 {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .page-header p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+
+        /* ═══════════════════════════════════════════════════
+           CATEGORY SECTIONS
+           ═══════════════════════════════════════════════════ */
+        .category-section {
+            padding-top: 1rem;
+            margin-bottom: var(--section-gap);
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .section-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+
+        .section-icon.cloud { background: var(--cloud-glow); color: var(--cloud-color); }
+        .section-icon.programming { background: var(--programming-glow); color: var(--programming-color); }
+        .section-icon.security { background: var(--security-glow); color: var(--security-color); }
+
+        .section-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            color: var(--text-primary);
+        }
+
+        .section-count {
+            margin-left: auto;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            background: var(--bg-glass);
+            padding: 0.3rem 0.7rem;
+            border-radius: var(--radius-pill);
+            border: 1px solid var(--border-subtle);
+        }
+
+        /* ═══════════════════════════════════════════════════
+           CERTIFICATE CARDS
+           ═══════════════════════════════════════════════════ */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: var(--card-gap);
+        }
+
+        .cert-card {
+            position: relative;
+            background: var(--bg-card);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            transition: transform var(--transition-medium), box-shadow var(--transition-medium), border-color var(--transition-medium);
+        }
+
+        .cert-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--card-accent, var(--accent-primary));
+            opacity: 0.8;
+            transition: opacity var(--transition-fast);
+        }
+
+        .cert-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-card-hover);
+            border-color: var(--border-medium);
+        }
+
+        .cert-card:hover::before {
+            opacity: 1;
+        }
+
+        .cert-card.cloud { --card-accent: var(--cloud-color); }
+        .cert-card.security { --card-accent: var(--security-color); }
+        .cert-card.programming { --card-accent: var(--programming-color); }
+        .cert-card.professional { --card-accent: var(--professional-color); }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        /* Priority + Issuer row */
+        .card-top-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 0.75rem;
+        }
+
+        .card-issuer {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            font-weight: 600;
+            color: var(--text-muted);
+        }
+
+        .card-issuer i {
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        .priority-tag {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.65rem;
+            font-weight: 600;
+            color: var(--accent-amber);
+            background: var(--accent-amber-glow);
+            padding: 0.2rem 0.6rem;
+            border-radius: var(--radius-pill);
+            border: 1px solid rgba(245, 158, 11, 0.2);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            line-height: 1.4;
+            margin-bottom: 0.6rem;
+            letter-spacing: -0.01em;
+        }
+
+        /* Meta row: date + badge */
+        .card-meta {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .card-date {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+        }
+
+        .card-date i {
+            font-size: 0.7rem;
+        }
+
+        .verified-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            font-size: 0.72rem;
+            font-weight: 600;
+            color: #22c55e;
+            background: rgba(34, 197, 94, 0.1);
+            padding: 0.2rem 0.6rem;
+            border-radius: var(--radius-pill);
+            border: 1px solid rgba(34, 197, 94, 0.15);
+        }
+
+        .verified-badge i {
+            font-size: 0.65rem;
+        }
+
+        /* Skills pills */
+        .card-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.35rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .skill-pill {
+            font-size: 0.68rem;
+            font-weight: 500;
+            padding: 0.2rem 0.55rem;
+            border-radius: var(--radius-pill);
+            background: var(--bg-glass);
+            color: var(--text-secondary);
+            border: 1px solid var(--border-subtle);
+            transition: border-color var(--transition-fast), color var(--transition-fast);
+        }
+
+        .cert-card:hover .skill-pill {
+            border-color: var(--border-medium);
+            color: var(--text-accent);
+        }
+
+        /* Action buttons */
+        .card-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .btn {
+            flex: 1;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.4rem;
+            padding: 0.6rem 1rem;
+            border: none;
+            border-radius: var(--radius-sm);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.82rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all var(--transition-fast);
+        }
+
+        .btn i {
+            font-size: 0.8rem;
+        }
+
+        .btn-view {
+            background: rgba(99, 102, 241, 0.12);
+            color: #818cf8;
+            border: 1px solid rgba(99, 102, 241, 0.2);
+        }
+
+        .btn-view:hover {
+            background: rgba(99, 102, 241, 0.2);
+            color: #a5b4fc;
+            border-color: rgba(99, 102, 241, 0.35);
+        }
+
+        .btn-download {
+            background: var(--bg-glass);
+            color: var(--text-secondary);
+            border: 1px solid var(--border-subtle);
+        }
+
+        .btn-download:hover {
+            background: var(--bg-glass-hover);
+            color: var(--text-primary);
+            border-color: var(--border-medium);
+        }
+
+        /* ═══════════════════════════════════════════════════
+           RESUME & COLLECTIONS SECTION
+           ═══════════════════════════════════════════════════ */
+        .extras-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--card-gap);
+            margin-top: var(--section-gap);
+            margin-bottom: var(--section-gap);
+        }
+
+        .extra-card {
+            background: var(--bg-card);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            transition: transform var(--transition-medium), box-shadow var(--transition-medium), border-color var(--transition-medium);
+        }
+
+        .extra-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-card);
+            border-color: var(--border-medium);
+        }
+
+        .extra-card-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .extra-card-icon.resume-icon {
+            background: rgba(99, 102, 241, 0.12);
+            color: var(--accent-primary);
+        }
+
+        .extra-card-icon.collection-icon {
+            background: var(--accent-amber-glow);
+            color: var(--accent-amber);
+        }
+
+        .extra-card h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .extra-card p {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.25rem;
+            line-height: 1.6;
+        }
+
+        .extra-card .btn {
+            width: auto;
+            flex: none;
+        }
+
+        .extra-actions {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        /* ═══════════════════════════════════════════════════
+           SKILLS SECTION
+           ═══════════════════════════════════════════════════ */
+        .skills-section {
+            margin-bottom: var(--section-gap);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 1rem;
+        }
+
+        .skill-category {
+            background: var(--bg-card);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            padding: 1.25rem;
+            transition: border-color var(--transition-fast);
+        }
+
+        .skill-category:hover {
+            border-color: var(--border-medium);
+        }
+
+        .skill-category-title {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-muted);
+            margin-bottom: 0.75rem;
+        }
+
+        .skill-category-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.35rem;
+        }
+
+        .skill-category-pills .skill-pill {
+            font-size: 0.72rem;
+        }
+
+        /* ═══════════════════════════════════════════════════
+           PDF PREVIEW MODAL
+           ═══════════════════════════════════════════════════ */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 2000;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-container {
+            width: 100%;
+            max-width: 900px;
+            height: 85vh;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-medium);
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transform: scale(0.95) translateY(10px);
+            transition: transform 0.3s var(--ease-out-expo);
+            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-overlay.active .modal-container {
+            transform: scale(1) translateY(0);
+        }
+
+        .modal-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid var(--border-subtle);
+            flex-shrink: 0;
+            background: var(--bg-primary);
+        }
+
+        .modal-title {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-right: 1rem;
+        }
+
+        .modal-header-actions {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            flex-shrink: 0;
+        }
+
+        .modal-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.45rem 0.9rem;
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-sm);
+            background: var(--bg-glass);
+            color: var(--text-secondary);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 500;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all var(--transition-fast);
+        }
+
+        .modal-btn:hover {
+            background: var(--bg-glass-hover);
+            color: var(--text-primary);
+            border-color: var(--border-medium);
+        }
+
+        .modal-close {
+            width: 32px;
+            height: 32px;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border-subtle);
+            background: var(--bg-glass);
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all var(--transition-fast);
+            padding: 0;
+        }
+
+        .modal-close:hover {
+            background: rgba(239, 68, 68, 0.15);
+            color: #ef4444;
+            border-color: rgba(239, 68, 68, 0.3);
+        }
+
+        .modal-body {
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .modal-body iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* ═══════════════════════════════════════════════════
+           FOOTER
+           ═══════════════════════════════════════════════════ */
+        .footer {
+            border-top: 1px solid var(--border-subtle);
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color var(--transition-fast), transform var(--transition-fast);
+        }
+
+        .footer-links a:hover {
+            color: var(--text-primary);
+            transform: translateY(-2px);
+        }
+
+        .footer-text {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+        }
+
+        .footer-text a {
+            color: var(--accent-primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color var(--transition-fast);
+        }
+
+        .footer-text a:hover {
+            color: #818cf8;
+        }
+
+        .footer-divider {
+            width: 40px;
+            height: 2px;
+            background: var(--border-subtle);
+            margin: 1.5rem auto;
+            border-radius: 1px;
+        }
+
+        /* ═══════════════════════════════════════════════════
+           SCROLL-TO-TOP BUTTON
+           ═══════════════════════════════════════════════════ */
+        .scroll-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 900;
+            width: 42px;
+            height: 42px;
+            border-radius: var(--radius-md);
+            background: var(--bg-card);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--border-subtle);
+            color: var(--text-secondary);
+            font-size: 1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(8px);
+            transition: all var(--transition-medium);
+            box-shadow: var(--shadow-card);
+        }
+
+        .scroll-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .scroll-top:hover {
+            color: var(--text-primary);
+            border-color: var(--border-medium);
+            transform: translateY(-2px);
+        }
+
+        /* ═══════════════════════════════════════════════════
+           SCROLL REVEAL ANIMATION
+           ═══════════════════════════════════════════════════ */
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.7s var(--ease-out-expo), transform 0.7s var(--ease-out-expo);
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Stagger children */
+        .cards-grid .cert-card.reveal:nth-child(1) { transition-delay: 0ms; }
+        .cards-grid .cert-card.reveal:nth-child(2) { transition-delay: 80ms; }
+        .cards-grid .cert-card.reveal:nth-child(3) { transition-delay: 160ms; }
+        .cards-grid .cert-card.reveal:nth-child(4) { transition-delay: 240ms; }
+
+        /* ═══════════════════════════════════════════════════
+           RESPONSIVE
+           ═══════════════════════════════════════════════════ */
+        @media (max-width: 768px) {
+            :root {
+                --section-gap: 3rem;
+                --nav-height: 56px;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: var(--nav-height);
+                left: 0;
+                right: 0;
+                background: rgba(6, 8, 15, 0.97);
+                backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
+                flex-direction: column;
+                padding: 1rem;
+                border-bottom: 1px solid var(--border-subtle);
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .nav-links a {
+                padding: 0.75rem 1rem;
+                font-size: 0.9rem;
+            }
+
+            .nav-toggle {
+                display: block;
+            }
+
+            .nav-contact {
+                display: none;
+            }
+
+            .page-header {
+                padding-top: calc(var(--nav-height) + 2rem);
+            }
+
+            .page-header h1 {
+                font-size: 1.6rem;
+            }
+
+            .cards-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .modal-container {
+                height: 95vh;
+                border-radius: var(--radius-md);
+            }
+
+            .modal-header {
+                padding: 0.75rem 1rem;
+            }
+
+            .modal-title {
+                font-size: 0.8rem;
+            }
+
+            .modal-btn span {
+                display: none;
+            }
+
+            .extras-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .scroll-top {
+                bottom: 1.25rem;
+                right: 1.25rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .card-actions {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ═══════════════ NAVIGATION ═══════════════ -->
+    <nav class="nav" id="navbar" aria-label="Main navigation">
+        <div class="nav-inner">
+            <a href="#" class="nav-brand">
+                <i class="fas fa-certificate"></i>
+                Aniket Asawale
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#overview" class="nav-link">Overview</a></li>
+                <li><a href="#cloud" class="nav-link">Cloud</a></li>
+                <li><a href="#programming" class="nav-link">Programming</a></li>
+                <li><a href="#security" class="nav-link">Security</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+            </ul>
+            <div class="nav-contact">
+                <a href="https://github.com/Aniket-Asawale" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/aniket-asawale/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:aniketasawale10@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <!-- ═══════════════ HEADER ═══════════════ -->
+    <header class="page-header">
+        <div class="container">
+            <h1>Certificates & Credentials</h1>
+            <p>Verified professional certifications portfolio & resume of Aniket Asawale</p>
+        </div>
+    </header>
+
+    <!-- ═══════════════ MAIN CONTENT ═══════════════ -->
+    <main class="container">
+
+        <!-- ─── Overview (Consolidated Documents) ─── -->
+        <section id="overview" class="category-section">
+            <div class="extras-grid">
+                <!-- Merged collection card -->
+                <div class="extra-card reveal">
+                    <div class="extra-card-icon collection-icon"><i class="fas fa-layer-group"></i></div>
+                    <h3>All Certificates — Merged</h3>
+                    <p>A single consolidated PDF containing all 9 certificates for easy sharing with recruiters and hiring managers.</p>
+                    <div class="extra-actions">
+                        <button class="btn btn-view" onclick="openPreview('Certificates/merged/merged_certificates_may_2026.pdf', 'All Certificates — May 2026')" aria-label="View merged certificates">
+                            <i class="far fa-eye"></i> View
+                        </button>
+                        <a href="Certificates/merged/merged_certificates_may_2026.pdf" class="btn btn-download" download aria-label="Download merged certificates">
+                            <i class="fas fa-download"></i> Download PDF
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Resume card -->
+                <div class="extra-card reveal">
+                    <div class="extra-card-icon resume-icon"><i class="fas fa-file-lines"></i></div>
+                    <h3>Resume</h3>
+                    <p>Download my full resume with project details, education, experience, and all certifications listed above.</p>
+                    <div class="extra-actions">
+                        <button class="btn btn-view" onclick="openPreview('Certificates/aniket-asawale-resume.pdf', 'Aniket Asawale — Resume')" aria-label="View resume">
+                            <i class="far fa-eye"></i> View
+                        </button>
+                        <a href="Certificates/aniket-asawale-resume.pdf" class="btn btn-download" download aria-label="Download resume">
+                            <i class="fas fa-download"></i> Download PDF
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ─── Cloud Computing ─── -->
+        <section class="category-section" id="cloud">
+            <div class="section-header">
+                <div class="section-icon cloud"><i class="fas fa-cloud"></i></div>
+                <h2 class="section-title">Cloud Computing</h2>
+                <span class="section-count">2 certs</span>
+            </div>
+            <div class="cards-grid">
+                <!-- AWS Cloud Architecting -->
+                <div class="cert-card cloud reveal">
+                    <div class="card-body">
+                        <div class="card-top-row">
+                            <div class="card-issuer"><i class="fab fa-aws"></i> Amazon Web Services</div>
+                            <span class="priority-tag">#1</span>
+                        </div>
+                        <div class="card-title">AWS Academy Cloud Architecting</div>
+                        <div class="card-meta">
+                            <span class="card-date"><i class="far fa-calendar"></i> June 2025</span>
+                            <span class="verified-badge"><i class="fas fa-check-circle"></i> Verified</span>
+                        </div>
+                        <div class="card-skills">
+                            <span class="skill-pill">AWS</span>
+                            <span class="skill-pill">EC2</span>
+                            <span class="skill-pill">VPC</span>
+                            <span class="skill-pill">S3</span>
+                            <span class="skill-pill">IAM</span>
+                            <span class="skill-pill">Cloud Architecture</span>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn btn-view" onclick="openPreview('Certificates/AWS_Academy_Graduate___AWS_Academy_Cloud_Architecting_Badge20250630-26-d2zzwn.pdf', 'AWS Academy Cloud Architecting')" aria-label="View AWS Cloud Architecting certificate">
+                                <i class="far fa-eye"></i> View
+                            </button>
+                            <a href="Certificates/AWS_Academy_Graduate___AWS_Academy_Cloud_Architecting_Badge20250630-26-d2zzwn.pdf" class="btn btn-download" download aria-label="Download AWS Cloud Architecting certificate">
+                                <i class="fas fa-download"></i> Download
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AWS Cloud Foundations -->
+                <div class="cert-card cloud reveal">
+                    <div class="card-body">
+                        <div class="card-top-row">
+                            <div class="card-issuer"><i class="fab fa-aws"></i> Amazon Web Services</div>
+                            <span class="priority-tag">#2</span>
+                        </div>
+                        <div class="card-title">AWS Academy Cloud Foundations</div>
+                        <div class="card-meta">
+                            <span class="card-date"><i class="far fa-calendar"></i> June 2025</span>
+                            <span class="verified-badge"><i class="fas fa-check-circle"></i> Verified</span>
+                        </div>
+                        <div class="card-skills">
+                            <span class="skill-pill">AWS</span>
+                            <span class="skill-pill">Cloud Computing</span>
+                            <span class="skill-pill">Google Cloud</span>
+                            <span class="skill-pill">Networking</span>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn btn-view" onclick="openPreview('Certificates/AWS_Academy_Graduate___AWS_Academy_Cloud_Foundations_Badge20250630-28-l0f4hz.pdf', 'AWS Academy Cloud Foundations')" aria-label="View AWS Cloud Foundations certificate">
+                                <i class="far fa-eye"></i> View
+                            </button>
+                            <a href="Certificates/AWS_Academy_Graduate___AWS_Academy_Cloud_Foundations_Badge20250630-28-l0f4hz.pdf" class="btn btn-download" download aria-label="Download AWS Cloud Foundations certificate">
+                                <i class="fas fa-download"></i> Download
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ─── Programming & Development ─── -->
+        <section class="category-section" id="programming">
+            <div class="section-header">
+                <div class="section-icon programming"><i class="fas fa-code"></i></div>
+                <h2 class="section-title">Programming & Development</h2>
+                <span class="section-count">3 certs</span>
+            </div>
+            <div class="cards-grid">
+                <!-- Cisco Programming Essentials -->
+                <div class="cert-card programming reveal">
+                    <div class="card-body">
+                        <div class="card-top-row">
+                            <div class="card-issuer"><i class="fas fa-network-wired"></i> Cisco Networking Academy</div>
+                            <span class="priority-tag">#3</span>
+                        </div>
+                        <div class="card-title">Cisco Programming Essentials</div>
+                        <div class="card-meta">
+                            <span class="card-date"><i class="far fa-calendar"></i> 2025</span>
+                            <span class="verified-badge"><i class="fas fa-check-circle"></i> Verified</span>
+                        </div>
+                        <div class="card-skills">
+                            <span class="skill-pill">Python</span>
+                            <span class="skill-pill">C/C++</span>
+                            <span class="skill-pill">Networking</span>
+                            <span class="skill-pill">Programming Fundamentals</span>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn btn-view" onclick="openPreview('Certificates/AniketAsawale-Cisco-Programming Esse-certificate.pdf', 'Cisco Programming Essentials')" aria-label="View Cisco Programming certificate">
+                                <i class="far fa-eye"></i> View
+                            </button>
+                            <a href="Certificates/AniketAsawale-Cisco-Programming Esse-certificate.pdf" class="btn btn-download" download aria-label="Download Cisco Programming certificate">
+                                <i class="fas fa-download"></i> Download
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Oracle Java -->
+                <div class="cert-card programming reveal">
+                    <div class="card-body">
+                        <div class="card-top-row">
+                            <div class="card-issuer"><i class="fab fa-java"></i> Oracle University</div>
+                            <span class="priority-tag">#4</span>
+                        </div>
+                        <div class="card-title">Java Programming Completion</div>
+                        <div class="card-meta">
+                            <span class="card-date"><i class="far fa-calendar"></i> 2025</span>
+                            <span class="verified-badge"><i class="fas fa-check-circle"></i> Verified</span>
+                        </div>
+                        <div class="card-skills">
+                            <span class="skill-pill">Java</span>
+                            <span class="skill-pill">OOP</span>
+                            <span class="skill-pill">SQL</span>
+                            <span class="skill-pill">Data Structures</span>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn btn-view" onclick="openPreview('Certificates/Oracle_Java_Completion.pdf', 'Java Programming Completion')" aria-label="View Java Programming certificate">
+                                <i class="far fa-eye"></i> View
+                            </button>
+                            <a href="Certificates/Oracle_Java_Completion.pdf" class="btn btn-download" download aria-label="Download Java Programming certificate">
+                                <i class="fas fa-download"></i> Download
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Google Android Developer -->
+                <div class="cert-card programming reveal">
+                    <div class="card-body">
+                        <div class="card-top-row">
+                            <div class="card-issuer"><i class="fab fa-google"></i> Google Developer Training</div>
+                            <span class="priority-tag">#8</span>
+                        </div>
+                        <div class="card-title">Android Developer Certificate</div>
+                        <div class="card-meta">
+                            <span class="card-date"><i class="far fa-calendar"></i> 2025</span>
+                            <span class="verified-badge"><i class="fas fa-check-circle"></i> Verified</span>
+                        </div>
+                        <div class="card-skills">
+                            <span class="skill-pill">Android</span>
+                            <span class="skill-pill">JavaScript</span>
+                            <span class="skill-pill">React</span>
+                            <span class="skill-pill">Mobile Development</span>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn btn-view" onclick="openPreview('Certificates/GOOGLE_ANDROID_DEVELOPER_CERTIFICATE.pdf', 'Android Developer Certificate')" aria-label="View Android Developer certificate">
+                                <i class="far fa-eye"></i> View
+                            </button>
+                            <a href="Certificates/GOOGLE_ANDROID_DEVELOPER_CERTIFICATE.pdf" class="btn btn-download" download aria-label="Download Android Developer certificate">
+                                <i class="fas fa-download"></i> Download
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ─── Security & Networking ─── -->
+        <section class="category-section" id="security">
+            <div class="section-header">
+                <div class="section-icon security"><i class="fas fa-shield-halved"></i></div>
+                <h2 class="section-title">Security & Networking</h2>
+                <span class="section-count">4 certs</span>
+            </div>
+            <div class="cards-grid">
+                <!-- Palo Alto -->
+                <div class="cert-card security reveal">
+                    <div class="card-body">
+                        <div class="card-top-row">
+                            <div class="card-issuer"><i class="fas fa-fire"></i> Palo Alto Networks</div>
+                            <span class="priority-tag">#5</span>
+                        </div>
+                        <div class="card-title">Palo Alto Networks Security</div>
+                        <div class="card-meta">
+                            <span class="card-date"><i class="far fa-calendar"></i> 2025</span>
+                            <span class="verified-badge"><i class="fas fa-check-circle"></i> Verified</span>
+                        </div>
+                        <div class="card-skills">
+                            <span class="skill-pill">Firewalls</span>
+                            <span class="skill-pill">Network Security</span>
+                            <span class="skill-pill">Threat Prevention</span>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn btn-view" onclick="openPreview('Certificates/ANIKET  ASAWALE PALO ALTO.pdf', 'Palo Alto Networks Security')" aria-label="View Palo Alto certificate">
+                                <i class="far fa-eye"></i> View
+                            </button>
+                            <a href="Certificates/ANIKET  ASAWALE PALO ALTO.pdf" class="btn btn-download" download aria-label="Download Palo Alto certificate">
+                                <i class="fas fa-download"></i> Download
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Juniper -->
+                <div class="cert-card security reveal">
+                    <div class="card-body">
+                        <div class="card-top-row">
+                            <div class="card-issuer"><i class="fas fa-network-wired"></i> Juniper Networks</div>
+                            <span class="priority-tag">#6</span>
+                        </div>
+                        <div class="card-title">Juniper Enterprise Security</div>
+                        <div class="card-meta">
+                            <span class="card-date"><i class="far fa-calendar"></i> 2025</span>
+                            <span class="verified-badge"><i class="fas fa-check-circle"></i> Verified</span>
+                        </div>
+                        <div class="card-skills">
+                            <span class="skill-pill">Enterprise Security</span>
+                            <span class="skill-pill">Networking</span>
+                            <span class="skill-pill">Routing</span>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn btn-view" onclick="openPreview('Certificates/ANIKET  ASAWALE Juniper.pdf', 'Juniper Enterprise Security')" aria-label="View Juniper certificate">
+                                <i class="far fa-eye"></i> View
+                            </button>
+                            <a href="Certificates/ANIKET  ASAWALE Juniper.pdf" class="btn btn-download" download aria-label="Download Juniper certificate">
+                                <i class="fas fa-download"></i> Download
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AICTE Fortinet -->
+                <div class="cert-card security reveal">
+                    <div class="card-body">
+                        <div class="card-top-row">
+                            <div class="card-issuer"><i class="fas fa-building-columns"></i> Fortinet / AICTE</div>
+                            <span class="priority-tag">#7</span>
+                        </div>
+                        <div class="card-title">AICTE Internship Certificate — Fortinet</div>
+                        <div class="card-meta">
+                            <span class="card-date"><i class="far fa-calendar"></i> 2025</span>
+                            <span class="verified-badge"><i class="fas fa-check-circle"></i> Approved</span>
+                        </div>
+                        <div class="card-skills">
+                            <span class="skill-pill">Cybersecurity</span>
+                            <span class="skill-pill">Fortinet</span>
+                            <span class="skill-pill">Docker</span>
+                            <span class="skill-pill">Internship</span>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn btn-view" onclick="openPreview('Certificates/AICTE_INTERNSHIP_CERTIFICATE_Fortinet_compressed.pdf', 'AICTE Internship — Fortinet')" aria-label="View Fortinet certificate">
+                                <i class="far fa-eye"></i> View
+                            </button>
+                            <a href="Certificates/AICTE_INTERNSHIP_CERTIFICATE_Fortinet_compressed.pdf" class="btn btn-download" download aria-label="Download Fortinet certificate">
+                                <i class="fas fa-download"></i> Download
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Simplilearn Cryptography -->
+                <div class="cert-card professional reveal">
+                    <div class="card-body">
+                        <div class="card-top-row">
+                            <div class="card-issuer"><i class="fas fa-graduation-cap"></i> Simplilearn</div>
+                            <span class="priority-tag">#9</span>
+                        </div>
+                        <div class="card-title">Introduction to Cryptography</div>
+                        <div class="card-meta">
+                            <span class="card-date"><i class="far fa-calendar"></i> 2025</span>
+                            <span class="verified-badge"><i class="fas fa-check-circle"></i> Verified</span>
+                        </div>
+                        <div class="card-skills">
+                            <span class="skill-pill">Cryptography</span>
+                            <span class="skill-pill">Security Fundamentals</span>
+                            <span class="skill-pill">Encryption</span>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn btn-view" onclick="openPreview('Certificates/Simplilearn_IntroductiontoCryptography_Certificate.pdf', 'Introduction to Cryptography')" aria-label="View Cryptography certificate">
+                                <i class="far fa-eye"></i> View
+                            </button>
+                            <a href="Certificates/Simplilearn_IntroductiontoCryptography_Certificate.pdf" class="btn btn-download" download aria-label="Download Cryptography certificate">
+                                <i class="fas fa-download"></i> Download
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ─── Skills Overview ─── -->
+        <section class="skills-section reveal" id="skills">
+            <div class="section-header">
+                <div class="section-icon" style="background: rgba(99,102,241,0.12); color: var(--accent-primary);"><i class="fas fa-cubes"></i></div>
+                <h2 class="section-title">Technical Skills</h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="skill-category-title">Languages</div>
+                    <div class="skill-category-pills">
+                        <span class="skill-pill">Python</span>
+                        <span class="skill-pill">C/C++</span>
+                        <span class="skill-pill">Java</span>
+                        <span class="skill-pill">JavaScript</span>
+                        <span class="skill-pill">SQL</span>
+                        <span class="skill-pill">HTML/CSS</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-category-title">Frameworks</div>
+                    <div class="skill-category-pills">
+                        <span class="skill-pill">React</span>
+                        <span class="skill-pill">Node.js</span>
+                        <span class="skill-pill">Flask</span>
+                        <span class="skill-pill">Django</span>
+                        <span class="skill-pill">Streamlit</span>
+                        <span class="skill-pill">TensorFlow</span>
+                        <span class="skill-pill">Scikit-learn</span>
+                        <span class="skill-pill">FastAPI</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-category-title">Cloud & Tools</div>
+                    <div class="skill-category-pills">
+                        <span class="skill-pill">AWS</span>
+                        <span class="skill-pill">Google Cloud</span>
+                        <span class="skill-pill">Git</span>
+                        <span class="skill-pill">GitHub</span>
+                        <span class="skill-pill">Docker</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-category-title">Developer Tools</div>
+                    <div class="skill-category-pills">
+                        <span class="skill-pill">STM32CubeIDE</span>
+                        <span class="skill-pill">Proteus</span>
+                        <span class="skill-pill">VS Code</span>
+                        <span class="skill-pill">Blender</span>
+                        <span class="skill-pill">PyCharm</span>
+                        <span class="skill-pill">Eclipse</span>
+                        <span class="skill-pill">GCP</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-category-title">Embedded Systems</div>
+                    <div class="skill-category-pills">
+                        <span class="skill-pill">STM32</span>
+                        <span class="skill-pill">Arduino</span>
+                        <span class="skill-pill">LoRa</span>
+                        <span class="skill-pill">UART</span>
+                        <span class="skill-pill">I2C</span>
+                        <span class="skill-pill">SD Card</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <!-- ═══════════════ FOOTER ═══════════════ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="https://github.com/Aniket-Asawale" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/aniket-asawale/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:aniketasawale10@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-text">
+                All certificates are verified and represent completed coursework.<br>
+                <a href="https://github.com/Aniket-Asawale/Certificates" target="_blank" rel="noopener">View source on GitHub</a><br><br>
+                <span style="opacity: 0.6;">Last updated July 2026 · Continuously growing</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ═══════════════ PDF PREVIEW MODAL ═══════════════ -->
+    <div class="modal-overlay" id="pdfModal" role="dialog" aria-modal="true" aria-label="Certificate Preview">
+        <div class="modal-container">
+            <div class="modal-header">
+                <span class="modal-title" id="modalTitle">Certificate Preview</span>
+                <div class="modal-header-actions">
+                    <a href="#" class="modal-btn" id="modalDownload" download aria-label="Download this certificate">
+                        <i class="fas fa-download"></i> <span>Download</span>
+                    </a>
+                    <a href="#" class="modal-btn" id="modalNewTab" target="_blank" rel="noopener" aria-label="Open in new tab">
+                        <i class="fas fa-external-link-alt"></i> <span>New Tab</span>
+                    </a>
+                    <button class="modal-close" id="modalClose" aria-label="Close preview">&times;</button>
+                </div>
+            </div>
+            <div class="modal-body">
+                <iframe id="pdfFrame" title="PDF Preview"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════════ SCROLL TO TOP ═══════════════ -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- ═══════════════ JAVASCRIPT ═══════════════ -->
+    <script>
+        // ── PDF Preview Modal ──
+        const modal = document.getElementById('pdfModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalDownload = document.getElementById('modalDownload');
+        const modalNewTab = document.getElementById('modalNewTab');
+        const pdfFrame = document.getElementById('pdfFrame');
+        const modalClose = document.getElementById('modalClose');
+
+        function openPreview(pdfPath, title) {
+            modalTitle.textContent = title;
+            modalDownload.href = pdfPath;
+            modalNewTab.href = pdfPath;
+            pdfFrame.src = pdfPath;
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            // Focus trap: focus close button
+            setTimeout(() => modalClose.focus(), 100);
+        }
+
+        function closePreview() {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+            pdfFrame.src = '';
+        }
+
+        modalClose.addEventListener('click', closePreview);
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closePreview();
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('active')) closePreview();
+        });
+
+        // ── Sticky Nav Scroll Effect ──
+        const navbar = document.getElementById('navbar');
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            const current = window.scrollY;
+            navbar.classList.toggle('scrolled', current > 50);
+            lastScroll = current;
+        }, { passive: true });
+
+        // ── Mobile Nav Toggle ──
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+            const icon = navToggle.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+        // Close mobile nav on link click
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('open');
+                const icon = navToggle.querySelector('i');
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-times');
+            });
+        });
+
+        // ── Scroll Reveal (IntersectionObserver) ──
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+
+
+        // ── Scroll to Top ──
+        const scrollTopBtn = document.getElementById('scrollTop');
+        window.addEventListener('scroll', () => {
+            scrollTopBtn.classList.toggle('visible', window.scrollY > 400);
+        }, { passive: true });
+
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // ── Active Nav Link Highlight ──
+        const sections = document.querySelectorAll('.category-section, .skills-section');
+        const navAnchors = document.querySelectorAll('.nav-link');
+
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.id;
+                    navAnchors.forEach(a => {
+                        a.classList.toggle('active', a.getAttribute('href') === '#' + id);
+                    });
+                }
+            });
+        }, { threshold: 0.2, rootMargin: `-${parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-height'))}px 0px -60% 0px` });
+
+        sections.forEach(s => sectionObserver.observe(s));
+    </script>
+</body>
+</html>
