@@ -28,6 +28,6 @@ A professional, self-hosted simple portfolio showcasing verified certifications 
 ## 📄 Public Resume Share
 
 - **Portfolio page:** [https://aniket-asawale.github.io/Certificates/](https://aniket-asawale.github.io/Certificates/)
-- **Direct resume PDF:** [https://aniket-asawale.github.io/Certificates/aniket-asawale-resume.pdf](https://aniket-asawale.github.io/Certificates/Certificates/aniket-asawale-resume.pdf)
+- **Direct resume PDF:** [https://aniket-asawale.github.io/Certificates/aniket-asawale-resume.pdf](https://aniket-asawale.github.io/Certificates/aniket-asawale-resume.pdf)
 
 
