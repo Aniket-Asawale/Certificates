@@ -1,4 +1,5 @@
 # Resume source file (keep private)
 *.docx
 auto-bot.md
-/.github
+.github/instructions/mermaid.instructions.md
+.github/copilot-instructions.md
