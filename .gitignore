@@ -1,3 +1,4 @@
 # Resume source file (keep private)
 *.docx
 auto-bot.md
+/.github
